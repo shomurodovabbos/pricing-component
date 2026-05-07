@@ -32,4 +32,5 @@ toggle.addEventListener("change", () => {
 });
 // initial state
 slider.value = 2;
+toggle.checked = false;
 updateUI();
