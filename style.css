@@ -136,13 +136,11 @@ body {
         box-shadow 0.2s ease;
 }
 
-/* hover effect (FRONTENDMENTOR style) */
 .card__slider input[type="range"]::-webkit-slider-thumb:hover {
     transform: scale(1.08);
     box-shadow: 0 15px 35px rgba(16, 213, 194, 0.55);
 }
 
-/* active (drag) */
 .card__slider input[type="range"]::-webkit-slider-thumb:active {
     cursor: grabbing;
     transform: scale(1.15);

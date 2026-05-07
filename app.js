@@ -1,5 +1,6 @@
 const slider = document.getElementById("slider");
 const price = document.getElementById("price");
+const toggle = document.querySelector(".toggle input");
 const prices = [0, 8, 16, 24, 30];
 
 function updateUI() {
@@ -19,6 +20,16 @@ function updateUI() {
 
 slider.addEventListener("input", updateUI);
 
+toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+        const value = Number(slider.value);
+        const discounted = prices[value] * 0.25;
+        price.textContent = `$${discounted.toFixed(2)}`;
+    } else {
+        const value = Number(slider.value);
+        price.textContent = `$${prices[value].toFixed(2)}`;
+    }
+});
 // initial state
 slider.value = 2;
 updateUI();
